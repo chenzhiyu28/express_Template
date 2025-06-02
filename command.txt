@@ -1,0 +1,40 @@
+# ===== Express + TypeScript Project Initialization Commands =====
+# This file lists the minimal dependencies and setup commands for both Windows and macOS
+
+====================
+== 1. Dependencies ==
+====================
+
+# Universal commands for both Windows and macOS (run in project root):
+npm init -y
+npm install express dotenv
+npm install -D typescript ts-node ts-node-dev @types/node @types/express @types/dotenv
+
+npm install reflect-metadata typeorm pg
+npx tsc --init
+
+==================================
+== 2. System-Specific Instructions ==
+==================================
+
+# ------- WINDOWS (PowerShell) -------
+
+# Set environment variables temporarily for a session:
+$env:NODE_ENV="development"
+$env:PORT="3000"
+$env:APP_NAME="My Express App"
+$env:MAIL_HOST="smtp.example.com"
+$env:MAIL_PASSWORD="your_password_here"
+
+# Run the app (in same terminal):
+npm run dev
+
+# ------- macOS / Linux (bash/zsh) -------
+
+# Set environment variables temporarily for a session:
+export NODE_ENV=development
+export PORT=3000
+export APP_NAME="My Express App"
+export MAIL_HOST=smtp.example.com
+export MAIL_PASSWORD=your_password_here
+
